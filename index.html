@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Times – кальянная на 3-й Парковой</title>
+<meta name="description" content="Times: кальяны от 1 000 ₽ по карте гостя, авторские чаи и лимонады, PS5 и матчи на проекторе. Москва, 3-я Парковая ул., 57, 2 этаж. Ежедневно 14:00–03:00. +7 (936) 209-20-06">
+<meta name="theme-color" content="#0b0d12">
+<meta property="og:title" content="Times – кальянная на 3-й Парковой">
+<meta property="og:description" content="Кальяны, чай, PS5 и проектор. Ежедневно 14:00–03:00">
+<meta property="og:image" content="img/t024.webp">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Commissioner:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>
+  document.documentElement.className += ' js';
+  try { if (localStorage.getItem('times-age') === 'yes') document.documentElement.className += ' age-ok'; } catch (e) {}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BarOrPub",
+  "name": "Times",
+  "telephone": "+79362092006",
+  "address": {"@type": "PostalAddress", "streetAddress": "3-я Парковая ул., 57, 2 этаж", "addressLocality": "Москва", "addressCountry": "RU"},
+  "geo": {"@type": "GeoCoordinates", "latitude": 55.805565, "longitude": 37.781214},
+  "openingHours": "Mo-Su 14:00-03:00",
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "5.0", "ratingCount": "77"}
+}
+</script>
+</head>
+<body>
+
+<div class="age" id="age" role="dialog" aria-modal="true" aria-labelledby="ageTitle">
+  <div class="age__box">
+    <img src="img/logo.png" alt="Times" class="age__logo" width="925" height="959">
+    <div id="ageAsk">
+      <p class="age__title" id="ageTitle">Вам уже есть 18?</p>
+      <p class="age__text">На&nbsp;сайте есть информация о&nbsp;кальянах, поэтому он&nbsp;только для взрослых гостей.</p>
+      <div class="age__btns">
+        <button type="button" class="btn btn--gold" id="ageYes">Да, мне есть 18</button>
+        <button type="button" class="btn btn--line" id="ageNo">Нет</button>
+      </div>
+    </div>
+    <div id="ageDeny" hidden>
+      <p class="age__title">Будем ждать вас позже</p>
+      <p class="age__text">К&nbsp;сожалению, сайт доступен только совершеннолетним.</p>
+    </div>
+  </div>
+</div>
+
+<header class="top">
+  <div class="top__in">
+    <a href="#top" class="top__logo"><img src="img/logo.png" alt="" width="36" height="37"><span>Times</span></a>
+    <nav class="nav" id="nav" aria-label="Разделы">
+      <a href="#hookah">Кальяны</a>
+      <a href="#menu">Чай и&nbsp;меню</a>
+      <a href="#hall">Зал</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#contacts">Контакты</a>
+      <a href="tel:+79362092006" class="nav__phone">+7 (936) 209-20-06</a>
+    </nav>
+    <a href="tel:+79362092006" class="btn btn--gold btn--sm top__cta">Забронировать</a>
+    <button class="burger" id="burger" aria-label="Меню навигации" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO: ночной город, как в логотипе -->
+<section class="hero">
+  <div class="sky" aria-hidden="true"><canvas id="city"></canvas></div>
+  <div class="wrap hero__in">
+    <div class="hero__text">
+      <p class="status" id="status">3-я Парковая, 57 · 2 этаж</p>
+      <h1 class="hero__title">Время<br><span>для себя</span></h1>
+      <p class="hero__lead">Город за&nbsp;окном не&nbsp;спит, и&nbsp;вы можете не&nbsp;спешить. Дымный кальян, большой чайник и&nbsp;проектор на&nbsp;всю стену до&nbsp;трёх ночи.</p>
+      <div class="hero__actions">
+        <a href="tel:+79362092006" class="btn btn--gold">Забронировать стол</a>
+        <a href="#hookah" class="btn btn--line">Цены на&nbsp;кальяны</a>
+      </div>
+    </div>
+    <div class="hero__logo"><img src="img/logo.png" alt="Times" width="925" height="959" fetchpriority="high"></div>
+  </div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Кальян от&nbsp;1&#8239;000&nbsp;₽ по&nbsp;карте гостя</span><span>Ежедневно 14:00–03:00</span><span>PS5 Pro</span><span>Матчи и&nbsp;бокс на&nbsp;проекторе</span><span>5,0 на&nbsp;Яндекс Картах</span>
+      <span>Кальян от&nbsp;1&#8239;000&nbsp;₽ по&nbsp;карте гостя</span><span>Ежедневно 14:00–03:00</span><span>PS5 Pro</span><span>Матчи и&nbsp;бокс на&nbsp;проекторе</span><span>5,0 на&nbsp;Яндекс Картах</span>
+    </div>
+  </div>
+</section>
+
+<!-- HOOKAH -->
+<section class="hookah" id="hookah">
+  <div class="wrap hookah__grid">
+    <div>
+      <div class="reveal">
+        <p class="label">Кальяны</p>
+        <h2 class="h2">Хороший кальян <span>не&nbsp;обязан быть дорогим</span></h2>
+        <p class="lead">Мастера объяснят всё по&nbsp;полочкам и&nbsp;подберут вкус. Гостям с&nbsp;картой Times кальян на&nbsp;чаше дешевле.</p>
+      </div>
+      <div class="prices">
+        <article class="price price--hot reveal">
+          <p class="price__tag">По&nbsp;карте Times</p>
+          <h3>Кальян на&nbsp;чаше</h3>
+          <b>1&#8239;000&nbsp;₽</b>
+          <p>Карту гостя оформят прямо в&nbsp;зале.</p>
+        </article>
+        <article class="price reveal">
+          <p class="price__tag">Классика</p>
+          <h3>Классическая чаша</h3>
+          <b>1&#8239;500&nbsp;₽</b>
+        </article>
+        <article class="price reveal">
+          <p class="price__tag">На&nbsp;фрукте</p>
+          <h3>На&nbsp;грейпфруте</h3>
+          <b>2&#8239;500&nbsp;₽</b>
+        </article>
+      </div>
+    </div>
+    <figure class="hookah__pic reveal">
+      <img src="img/t015.webp" alt="Кальян и чайник у панорамного окна с видом на ночной город" loading="lazy">
+      <figcaption>Вид на&nbsp;город со&nbsp;второго этажа</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="label">Чай и&nbsp;меню</p>
+      <h2 class="h2">К&nbsp;кальяну <span>большой чайник</span></h2>
+      <p class="lead">Классические и&nbsp;фруктовые чаи, авторские лимонады и&nbsp;кофе. Еду можно принести с&nbsp;собой или заказать доставку.</p>
+    </div>
+    <div class="tabs" role="tablist" aria-label="Разделы меню">
+      <button role="tab" class="tab is-active" aria-selected="true" data-tab="tea">Чай</button>
+      <button role="tab" class="tab" aria-selected="false" data-tab="lemonade">Лимонады</button>
+      <button role="tab" class="tab" aria-selected="false" data-tab="coffee">Кофе и&nbsp;напитки</button>
+      <button role="tab" class="tab" aria-selected="false" data-tab="snack">Снеки</button>
+    </div>
+    <div class="menu__body" id="menuBody" aria-live="polite"></div>
+  </div>
+</section>
+
+<!-- HALL -->
+<section class="hall" id="hall">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="label">Зал</p>
+      <h2 class="h2">Свежий ремонт, <span>огни города</span></h2>
+    </div>
+    <div class="gal">
+      <figure class="g g--1 reveal"><img src="img/t024.webp" alt="Зал с горчичными и изумрудными диванами у панорамных окон" loading="lazy"></figure>
+      <figure class="g g--2 reveal"><img src="img/t027.webp" alt="Горчичный диван и логотип Times на стене" loading="lazy"></figure>
+      <figure class="g g--3 reveal"><img src="img/t022.webp" alt="Проектор на всю стену" loading="lazy"></figure>
+      <figure class="g g--4 reveal"><img src="img/t008.webp" alt="Экраны с огнём камина над диванами" loading="lazy"></figure>
+    </div>
+    <div class="feats">
+      <article class="feat reveal"><b>PS5 Pro</b><span>450&nbsp;₽ в&nbsp;час</span><p>Приставка и&nbsp;большой экран для компании.</p></article>
+      <article class="feat reveal"><b>Проектор</b><span>на&nbsp;всю стену</span><p>Футбол и&nbsp;бокс, а&nbsp;между матчами пейзажи приморских городов.</p></article>
+      <article class="feat reveal"><b>Настолки</b><span>и&nbsp;Wi-Fi</span><p>Можно поиграть или поработать с&nbsp;ноутбуком.</p></article>
+      <article class="feat reveal"><b>Праздники</b><span>по&nbsp;предзаказу</span><p>Дни рождения, корпоративы, деловые встречи. Есть подарочные сертификаты.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="reviews__head reveal">
+      <div>
+        <p class="label">Отзывы</p>
+        <h2 class="h2">Пять <span>из&nbsp;пяти</span></h2>
+      </div>
+      <div class="score"><b>5,0</b><span>★★★★★<br>65 отзывов · 77 оценок<br>на&nbsp;Яндекс Картах</span></div>
+    </div>
+    <div class="quotes">
+      <figure class="q q--big reveal">
+        <blockquote>Уютный зал, хитовая музыка, проектор на&nbsp;всю стену показывает завораживающие пейзажи приморских городов. Пару раз попадал на&nbsp;трансляции футбола и&nbsp;бокса – потрясающие эмоции!</blockquote>
+        <figcaption><b>Гость</b><span>Яндекс Карты · 24 апреля 2025</span></figcaption>
+      </figure>
+      <figure class="q reveal">
+        <blockquote>Приветливый и&nbsp;компетентный персонал, хорошие кальянные мастера, очень приятный и&nbsp;свежий ремонт. 10/10.</blockquote>
+        <figcaption><b>Гость</b><span>Яндекс Карты · 20 мая 2025</span></figcaption>
+      </figure>
+      <figure class="q reveal">
+        <blockquote>Кальян вкусный, дымный, и&nbsp;цены очень радуют. Чисто, опрятно, очень уютно. Рекомендую!</blockquote>
+        <figcaption><b>Гость</b><span>Яндекс Карты · 11 апреля 2025</span></figcaption>
+      </figure>
+      <figure class="q reveal">
+        <blockquote>Прекрасная кальянная, хорошие сотрудники, добрые, приятные, объяснили всё по&nbsp;полочкам.</blockquote>
+        <figcaption><b>Гость</b><span>Яндекс Карты · 26 июля</span></figcaption>
+      </figure>
+    </div>
+    <a class="more" href="https://yandex.ru/maps/org/times/201315091724/reviews/" target="_blank" rel="noopener">Все отзывы на&nbsp;Яндекс Картах&nbsp;→</a>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+<section class="contacts" id="contacts">
+  <div class="wrap contacts__grid">
+    <div class="reveal">
+      <p class="label">Контакты</p>
+      <h2 class="h2">Ждём <span>на&nbsp;2&nbsp;этаже</span></h2>
+      <dl class="info">
+        <div><dt>Адрес</dt><dd>Москва, 3-я Парковая ул., 57<span class="sub">2 этаж, есть лифт · м. Щёлковская, 1,5 км</span></dd></div>
+        <div><dt>Телефон</dt><dd><a href="tel:+79362092006">+7 (936) 209-20-06</a></dd></div>
+        <div><dt>Часы</dt><dd>Ежедневно, 14:00–03:00</dd></div>
+        <div><dt>Оплата</dt><dd>Карта, наличные, перевод</dd></div>
+      </dl>
+      <div class="contacts__actions">
+        <a href="tel:+79362092006" class="btn btn--gold">Позвонить</a>
+        <a href="https://t.me/times_lounge" target="_blank" rel="noopener" class="btn btn--line">Telegram</a>
+        <a href="https://vk.ru/vk.link/times_hookah" target="_blank" rel="noopener" class="btn btn--line">ВКонтакте</a>
+        <a href="https://yandex.ru/maps/org/times/201315091724/" target="_blank" rel="noopener" class="btn btn--line">Маршрут</a>
+      </div>
+      <figure class="find">
+        <img src="img/t002.webp" alt="Здание с вывеской Times на втором этаже" loading="lazy">
+        <figcaption>Ищите вывеску <b>TIMES</b> над стеклянным фасадом, нам на&nbsp;второй этаж.</figcaption>
+      </figure>
+    </div>
+    <div class="map reveal">
+      <iframe title="Times на Яндекс Картах" src="https://yandex.ru/map-widget/v1/?ll=37.781214%2C55.805565&z=16&pt=37.781214%2C55.805565%2Cpm2ywl" loading="lazy" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__in">
+    <img src="img/logo.png" alt="Times" class="footer__logo" loading="lazy">
+    <nav class="footer__nav" aria-label="Разделы">
+      <a href="#hookah">Кальяны</a><a href="#menu">Чай и&nbsp;меню</a><a href="#hall">Зал</a><a href="#contacts">Контакты</a>
+    </nav>
+    <div class="footer__meta">
+      <a href="tel:+79362092006">+7 (936) 209-20-06</a>
+      <span>3-я Парковая ул., 57 · 14:00–03:00</span>
+    </div>
+  </div>
+  <div class="wrap footer__legal">
+    <span>© Times</span>
+    <span>18+ · Информация на&nbsp;сайте носит справочный характер и&nbsp;не&nbsp;является рекламой.</span>
+  </div>
+</footer>
+
+<div class="dock" aria-label="Быстрые действия">
+  <a href="tel:+79362092006">Позвонить</a>
+  <a href="#hookah">Цены</a>
+  <a href="https://yandex.ru/maps/org/times/201315091724/" target="_blank" rel="noopener">Маршрут</a>
+</div>
+
+<script src="menu.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
